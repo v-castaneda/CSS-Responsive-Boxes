@@ -1,42 +1,38 @@
 * {
   border: 1px solid gray;
+  border-color: black;
 }
 
 /* Setting variables for div height and width */
 :root {
-  --a-div-height: 20px;
-  --a-div-width: 40px;
-
-  --b-div-height: 120px;
-  --b-div-width: 40px;
-
-  --c-div-height: 20px;
-  --c-div-width: 40px;
+  --div-height: 50px;
 }
 
 body {
   background: blanchedalmond;
 }
 
-.container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row wrap;
-  align-items: stretch;
+@media (min-width: 600px) {
+  .container {
+    display: flex;
+    min-height: 500px;
+    flex-wrap: wrap; 
+  }
+
+  /* setting div heights and widths */
+  .a {
+     min-height: var(--a-div-height);
+     width: 100%;
+  }
+  
+  .b {
+    min-height: var(--b-div-height);
+    flex-grow: 4;
+  }
+  
+  .c {
+    min-height: var(--c-div-height);
+    flex-grow: 1;
+  }
 }
 
-/* setting div heights and widths */
-.a {
-  min-height: var(--a-div-height);
-  flex-grow: 1;
-}
-
-.b {
-  min-height: var(--b-div-height);
-  flex-grow: 2;
-}
-
-.c {
-  min-height: var(--c-div-height);
-  flex-grow: 3;
-}
