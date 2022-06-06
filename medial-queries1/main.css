@@ -28,16 +28,15 @@ body {
 /* setting div heights and widths */
 .a {
   min-height: var(--a-div-height);
-  min-width: var(--a-div-width);
-
+  flex-grow: 1;
 }
 
 .b {
   min-height: var(--b-div-height);
-  flex-grow: 1;
+  flex-grow: 2;
 }
 
 .c {
   min-height: var(--c-div-height);
-  min-width: var(--c-div-width);
+  flex-grow: 3;
 }
