@@ -1,3 +1,28 @@
 body {
   background: papayawhip;
 }
+
+* {
+  border: 1px solid gray;
+  border-color: black;
+}
+
+/* Setting variables */
+:root {
+  --div-height-small: 50px;
+  --div-height-large: 150px;
+}
+
+body {
+  background: blanchedalmond;
+}
+
+/* Large screen settings */
+@media (min-width: 800px) {
+ /* stuck here, using Flexplorer to navigate the construction of this layout*/
+}
+
+/* Small screen settings */
+@media (max-width: 800px) {
+  /* stuck here, using Flexplorer to navigate the construction of this layout*/
+}
