@@ -13,7 +13,7 @@ body {
 }
 
 /* setting div heights and widths when screen is larger */
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .container {
     display: flex;
     min-height: var(--div-height);
@@ -37,7 +37,7 @@ body {
 }
 
 /* setting div heights and widths when screen is smaller */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .container {
     display: flex;
     flex-direction: column;
