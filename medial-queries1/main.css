@@ -3,7 +3,7 @@
   border-color: black;
 }
 
-/* Setting variables for div height and width */
+/* Setting variables */
 :root {
   --div-height: 50px;
 }
@@ -12,14 +12,14 @@ body {
   background: blanchedalmond;
 }
 
+/* setting div heights and widths when screen is larger */
 @media (min-width: 600px) {
   .container {
     display: flex;
-    min-height: 500px;
+    min-height: var(--div-height);
     flex-wrap: wrap; 
   }
 
-  /* setting div heights and widths */
   .a {
      min-height: var(--a-div-height);
      width: 100%;
@@ -36,3 +36,25 @@ body {
   }
 }
 
+/* setting div heights and widths when screen is smaller */
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .a {
+    min-height: var(--div-height);
+    flex-grow: 1;
+  }
+  
+  .b {
+    min-height: var(--div-height);
+    flex-grow: 2;
+  }
+  
+  .c {
+    min-height: var(--div-height);
+    flex-grow: 1;
+  }
+}
