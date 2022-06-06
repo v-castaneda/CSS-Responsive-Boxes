@@ -5,38 +5,38 @@
 
 /* Setting variables */
 :root {
-  --div-height: 50px;
+  --div-height-small: 50px;
+  --div-height-large: 150px;
 }
 
 body {
   background: blanchedalmond;
 }
 
-/* setting div heights and widths when screen is larger */
+/* Large screen settings */
 @media (min-width: 800px) {
   .container {
     display: flex;
-    min-height: var(--div-height);
     flex-wrap: wrap; 
   }
 
   .a {
-     min-height: var(--a-div-height);
+     min-height: 50px;
      width: 100%;
   }
   
   .b {
-    min-height: var(--b-div-height);
+    min-height: var(--div-height-large);
     flex-grow: 4;
   }
   
   .c {
-    min-height: var(--c-div-height);
+    min-height: var(--div-height-large);
     flex-grow: 1;
   }
 }
 
-/* setting div heights and widths when screen is smaller */
+/* Small screen settings */
 @media (max-width: 800px) {
   .container {
     display: flex;
@@ -44,17 +44,17 @@ body {
   }
   
   .a {
-    min-height: var(--div-height);
+    min-height: var(--div-height-small);
     flex-grow: 1;
   }
   
   .b {
-    min-height: var(--div-height);
+    min-height: var(--div-height-small);
     flex-grow: 2;
   }
   
   .c {
-    min-height: var(--div-height);
+    min-height: var(--div-height-small);
     flex-grow: 1;
   }
 }
