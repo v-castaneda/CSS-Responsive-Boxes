@@ -1,3 +1,43 @@
+* {
+  border: 1px solid gray;
+}
+
+/* Setting variables for div height and width */
+:root {
+  --a-div-height: 20px;
+  --a-div-width: 40px;
+
+  --b-div-height: 120px;
+  --b-div-width: 40px;
+
+  --c-div-height: 20px;
+  --c-div-width: 40px;
+}
+
 body {
   background: blanchedalmond;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
+
+/* setting div heights and widths */
+.a {
+  min-height: var(--a-div-height);
+  min-width: var(--a-div-width);
+
+}
+
+.b {
+  min-height: var(--b-div-height);
+  flex-grow: 1;
+}
+
+.c {
+  min-height: var(--c-div-height);
+  min-width: var(--c-div-width);
 }
